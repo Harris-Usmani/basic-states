@@ -18,7 +18,7 @@ function App() {
     }
 
     fetchPosts();
-  }, []); t
+  }, []);
 
   // POST request to create a new post
   async function createPost() {
