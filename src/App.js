@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div>
-      <h1>Quran Surah Viewer</h1>
+      <h1>quran through api https examplee</h1>
 
       <div>
         <label>Select Surah (1-114): </label>
