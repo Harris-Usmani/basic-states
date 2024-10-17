@@ -3,8 +3,6 @@ import React, { useState, useEffect } from 'react';
 function App() {
   const [verses, setVerses] = useState(null); 
   const [surah, setSurah] = useState(1); 
-  const [ayah, setAyah] = useState(1); 
-
 
   useEffect(() => {
     async function fetchVerses() {
@@ -18,11 +16,11 @@ function App() {
     }
 
     fetchVerses();
-  }, [surah]); 
+  }, [surah]);
 
   return (
     <div>
-      <h1>quran api example using https protocol</h1>
+      <h1>Quran Surah Viewer</h1>
 
       <div>
         <label>Select Surah (1-114): </label>
@@ -38,10 +36,9 @@ function App() {
       {verses && (
         <div>
           <h2>Fetched Verses from Surah {surah}:</h2>
-          {verses.map((verse, index) => (
+          {verses.map((verse) => (
             <div key={verse.number}>
               <p>{verse.text}</p>
-              <button onClick={() => deleteVerse(index)}>Remove Verse</button>
             </div>
           ))}
         </div>
